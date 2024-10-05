@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AllDebrid: Premium link generator and torrent downloader.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Alldebrid is compatible with over 70 hosts including 1fichier, Rapidgator and more. Go ahead, join us and download without limitations !" />
+<meta http-equiv="Content-Language" content="en">
+<meta name="google-site-verification" content="q5A1traTs9jqtlewZVCiMxTucQPsJ96Uh7Bn7cEE2-I" />
+<meta name="viewport" content="width=device-width, initial-scale=0.33">
+
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mdjbgnpehbhpibonmjjjbjaoechnlcaf">
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.alldebrid.com/lib/images/default/favicon.png" />
+<link href="https://cdn.alldebrid.com/lib/css/font-awesome.css?cacheKiller=2401" rel="stylesheet" type="text/css" />
+<link href="https://cdn.alldebrid.com/lib/css/legacy.css?cacheKiller=2401" rel="stylesheet" type="text/css" />
+<link href="https://cdn.alldebrid.com/lib/css/main.css?cacheKiller=2711" rel="stylesheet" type="text/css" />
+<link href="https://cdn.alldebrid.com/lib/css/dark.css?cacheKiller=2401" rel="stylesheet" type="text/css" />
+</head>
+<body class="lang-en cssv2" style="margin: 0px;">
+<div id="container_header">
+
+<div id="top">
+<div id="account"><a class="liengris" href="https://alldebrid.com/register/">Create an account</a><span style="font-size:11px; color:#b1b1b1; font-weight:bold;"> | </span><a class="liengris" href="https://alldebrid.com/register/">Sign in</a><span style="font-size:11px; color:#b1b1b1; font-weight:bold;"> | </span><a class="liengris" href="https://alldebrid.com/pin/">Use a PIN code</a></div>
+<a class="twitter" href="https://twitter.com/#!/alldebrid/" rel="nofollow">Twitter</a>
+<div id="balloon" style="overflow: hidden;font-size: 11px;"><a style href="https://www.facebook.com/permalink.php?story_fbid=pfbid02VUw1rYscAMKdFkAAGbmUuRxV4rggiqRHxwnMfdgfFexHxNzvUtG3w2kS9fkTAdefl&id=100071097737399">New mobile app available => https://alldebrid.com/m/</a></div>
+</div>
+
+<div id="menu">
+<a class="logo_alldebrid" href="https://alldebrid.com/">Premium link generator and torrent downloader.</a>
+<div id="liens">
+<ul>
+<li><a class="lienmenu" href="https://alldebrid.com/faq/">FAQ</a></li>
+<li><a class="lienmenu" href="https://alldebrid.com/service/">Downloader</a></li>
+<li><a class="lienmenu" href="https://alldebrid.com/offer/">Pricing</a></li>
+
+<li><a class="lienmenu" href="https://alldebrid.com/contact/">Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="container_index"><script>
+var forceLocal = null;
+var forceTZ = null;
+
+function fdate(format, time) {
+	const date = new Date(time * 1000);
+
+	if(isNaN(date)) {
+		return '-';
+	}
+
+	var options = {};
+
+	if(format == 'full') {
+		options.dateStyle = 'short';
+		options.timeStyle = 'short';
+	} else if(format == 'date') {
+		options.dateStyle = 'short';
+	} else if(format == 'time') {
+		options.timeStyle = 'short';
+	} else {
+		console.log('Bad format', format);
+		options.dateStyle = 'short';
+	}
+
+	if(forceLocal === null) {
+		forceLocal = Lockr.get('time.locale') || false;
+		forceTZ = Lockr.get('time.tz') || false;
+	}
+
+	if(forceTZ !== false && forceTZ.indexOf('/') !== -1) {
+		options.timeZone = forceTZ;
+	}
+
+	var local = undefined; // default locale
+	if(forceLocal !== false) {
+		local = forceLocal;
+	}
+
+	return new Intl.DateTimeFormat(local, options).format(date);
+}
+function syncDate() {
+	const dates = Array.from(document.querySelectorAll('span[data-fdate]'));
+
+	dates.forEach(function(dateNode) {
+		dateNode.innerText = fdate(dateNode.dataset.format, dateNode.dataset.fdate);
+	});
+}
+</script>
+<div id="container_index">
+<div id="lostpassword">
+<div id="new_compare_box" class="box" style="font-family: Sketch_Block, Segoe UI, sans-serif; width: 850px; margin: 0 auto; padding: 15px;">
+<div style="float:left; margin-left: 20px;">
+<span style="font-size:21px; color:#33969a;">46 hosts</span> currently supported<br/><br/>
+<span><i style="opacity: 0.7;" class="sprite sprite-1fichier"></i> <a href="/hosts/1fichier/">1fichier</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-rapidgator"></i> <a href="/hosts/rapidgator/">rapidgator</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-turbobit"></i> <a href="/hosts/turbobit/">turbobit</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-hitfile"></i> <a href="/hosts/hitfile/">hitfile</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-wayupload"></i> <a href="/hosts/wayupload/">wayupload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-mega"></i> <a href="/hosts/mega/">mega</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-4shared"></i> <a href="/hosts/4shared/">4shared</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-alfafile"></i> <a href="/hosts/alfafile/">alfafile</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-apkadmin"></i> <a href="/hosts/apkadmin/">apkadmin</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-cloudvideo"></i> <a href="/hosts/cloudvideo/">cloudvideo</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-ddl"></i> <a href="/hosts/ddl/">ddownload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-dropapk"></i> <a href="/hosts/dropapk/">dropapk</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-dropgalaxy"></i> <a href="/hosts/dropgalaxy/">dropgalaxy</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-fastbit"></i> <a href="/hosts/fastbit/">fastbit</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-file-upload"></i> <a href="/hosts/file-upload/">file-upload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-fileal"></i> <a href="/hosts/fileal/">fileal</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-filedot"></i> <a href="/hosts/filedot/">filedot</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-filespace"></i> <a href="/hosts/filespace/">filespace</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-flashbit"></i> <a href="/hosts/flashbit/">flashbit</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-gigapeta"></i> <a href="/hosts/gigapeta/">gigapeta</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-google"></i> <a href="/hosts/google/">google</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-harefile"></i> <a href="/hosts/harefile/">harefile</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-hexupload"></i> <a href="/hosts/hexupload/">hexupload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-isra"></i> <a href="/hosts/isra/">isra</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-katfile"></i> <a href="/hosts/katfile/">katfile</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-mediafire"></i> <a href="/hosts/mediafire/">mediafire</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-mexashare"></i> <a href="/hosts/mexashare/">mexashare</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-modsbase"></i> <a href="/hosts/modsbase/">modsbase</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-mp4upload"></i> <a href="/hosts/mp4upload/">mp4upload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-prefiles"></i> <a href="/hosts/prefiles/">prefiles</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-rapidfileshare"></i> <a href="/hosts/rapidfileshare/">rapidfileshare</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-scribd"></i> <a href="/hosts/scribd/">scribd</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-sendit"></i> <a href="/hosts/sendit/">sendit</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-sharemods"></i> <a href="/hosts/sharemods/">sharemods</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-simfileshare"></i> <a href="/hosts/simfileshare/">simfileshare</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-upload42"></i> <a href="/hosts/upload42/">upload42</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploadboy"></i> <a href="/hosts/uploadboy/">uploadboy</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploadev"></i> <a href="/hosts/uploadev/">uploadev</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploadrar"></i> <a href="/hosts/uploadrar/">uploadrar</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploady"></i> <a href="/hosts/uploady/">uploady</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-userscloud"></i> <a href="/hosts/userscloud/">userscloud</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-userupload"></i> <a href="/hosts/userupload/">userupload</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-vidoza"></i> <a href="/hosts/vidoza/">vidoza</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-vipfile"></i> <a href="/hosts/vipfile/">vipfile</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-world-files"></i> <a href="/hosts/world-files/">world-files</a></span><br/><span><i style="opacity: 0.7;" class="sprite sprite-worldbytez"></i> <a href="/hosts/worldbytez/">worldbytez</a></span><br/></div>
+<div style="float:right; width: 450px;">
+<span style="font-size:21px; color:#33969a;">10 free hosts</span> currently supported<br/>
+<span style="font-size:11px;">Available for free on a best effort basis (<a target="_blank" href="https://help.alldebrid.com/en/faq/free-hosts">More info</a>)</span><br/><br/>
+<span><i style="opacity: 0.7;" class="sprite sprite-dailyuploads"></i> dailyuploads</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-exload"></i> exload</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-filerio"></i> filerio</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-filezip"></i> filezip</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-hot4share"></i> hot4share</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-indishare"></i> indishare</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-mixdrop"></i> mixdrop</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploadbank"></i> uploadbank</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-uploadbox"></i> uploadbox</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-usersdrive"></i> usersdrive</span><br/></div>
+<div style="float:right; width: 450px; margin-top: 50px;">
+<span style="font-size:21px; color:#33969a;">1455 free stream hosts</span> currently supported<br/><br/>
+<span><i style="opacity: 0.7;" class="sprite sprite-dailymotion"></i> dailymotion</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-twitch"></i> twitch</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-soundcloud"></i> soundcloud</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-vimeo"></i> vimeo</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-archive.org"></i> archive.org</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-Beeg"></i> Beeg</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-Canalplus"></i> Canalplus</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-ComedyCentral"></i> ComedyCentral</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-crunchyroll"></i> crunchyroll</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-DrTuber"></i> DrTuber</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-4tube"></i> 4tube</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-lynda"></i> lynda</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-niconico"></i> niconico</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-NYTimes"></i> NYTimes</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-Odnoklassniki"></i> Odnoklassniki</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-PornHub"></i> PornHub</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-PornoXO"></i> PornoXO</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-RTBF"></i> RTBF</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-RedTube"></i> RedTube</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-RTS"></i> RTS</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-rtve.es"></i> rtve.es</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-rutube"></i> rutube</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-SpankBang"></i> SpankBang</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-Steam"></i> Steam</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-SunPorno"></i> SunPorno</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-Veoh"></i> Veoh</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-XHamster"></i> XHamster</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-XNXX"></i> XNXX</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-XVideos"></i> XVideos</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-XXXYMovies"></i> XXXYMovies</span><br/><span><i style="opacity: 0.7;" class="sprite sprite-YouJizz"></i> YouJizz</span><br/><br/><span>(And many more...)</span></div>
+<div style="clear:both"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="container_footer">
+
+<div id="footer">
+<div class="footer_logo_alldebrid"></div>
+
+<div class="footer_title_trick" style="color:#ffffff">Did you know ?</div>
+<div class="footer_trick">&#145;&#145;For optimal speed, we do not overcome 50% of our infrastructure bandwidth. This guarantees you a maximum speed under all circumstances, if the file hoster isn't having bandwidth issues itself of course :)&#145;&#145;</div><br/>
+<div class="footer_trick"></div>
+<div class="copyright">&copy; <strong>AllDebrid.com</strong> 2009 2042 - High quality premium link downloader. All rights reserved, reproduction prohibited without authorization. (5.89ms - 0)</div>
+<div class="footer_links">
+<a class="lienjaune" href="//m.alldebrid.com">Mobile</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/service/">Downloader</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/offer/">Pricing</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+
+
+<a class="lienjaune" href="https://alldebrid.com/legal/">Legal</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/privacy/">Privacy</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/tos/">Terms of Service</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/bounty/">Bounty Program</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="//docs.alldebrid.com/">API (developer)</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://dondon.media/">Japon</a>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a class="lienjaune" href="https://alldebrid.com/contact/">Support</a><br/><br/></div>
+</div>
+
+<div style id="toolbar">
+<div class="options">
+<div class="toolbar_facebook">
+<a class="resp-sharing-button__link" href="https://www.facebook.com/Alldebrid-english-124415304294153/" target="_blank" aria-label="Facebook">
+<div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--large"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" /></svg>
+</div><span style="font-weight: bold">Like</span> 39K</div>
+</a>
+</div>
+<div class="toolbar_spacing"></div>
+
+<div class="toolbar_country"><img src="https://cdn.alldebrid.com/lib/images/default/ui/toolbar/flags/us.png" width="16" height="11" alt="Français" />
+<i class="sprite-icons sprite-small_arrow2" style="margin:0 13px 0 8px; padding-bottom:2px;" alt="Sélectionnez une langue"></i></div>
+<ul class="toolbar_flags">
+<li class="country"><i class="sprite-icons sprite-fr" alt="Français"></i><a class="lientoolbar" href="http://alldebrid.fr/">Français</a></li>
+<li class="country"><i class="sprite-icons sprite-us" alt="International"></i><a class="lientoolbar" href="http://alldebrid.com/?lang=en">International</a></li>
+<li class="country"><i class="sprite-icons sprite-tr" alt="Türkçe"></i><a class="lientoolbar" href="http://alldebrid.org/">Türkçe</a></li>
+<li class="country"><i class="sprite-icons sprite-de" alt="German"></i><a class="lientoolbar" href="http://alldebrid.de/">German</a></li>
+<li class="country"><i class="sprite-icons sprite-it" alt="Italian"></i><a class="lientoolbar" href="http://alldebrid.it">Italian</a></li>
+<li class="country"><i class="sprite-icons sprite-es" alt="Español"></i><a class="lientoolbar" href="http://alldebrid.es">Español</a></li>
+
+</ul>
+<div class="toolbar_spacing"></div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="toolbar_welcome toolbar_guest" href="/register/">Create an account</a>&nbsp;&nbsp;<span style="font-size:11px; color:#b1b1b1; font-weight:bold;">|&nbsp;&nbsp;<a class="toolbar_welcome toolbar_connect" href="/register/">Sign in</a></span><div class="toolbar_spacing"></div>
+<a class="darkModeSwitch" onClick="Cookies.set('theme', 'dark', {expires: 1000, 'path': '/', 'domain': '.alldebrid.com'}); location.reload();">Switch to Dark Theme</a>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://cdn.alldebrid.com/lib/script/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.alldebrid.com/lib/script/js.js?cacheKiller=2401"></script>
+<script type="text/javascript" src="https://cdn.alldebrid.com/lib/script/libs.js?cacheKiller=2401"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+	window.addEventListener("load", function(){
+		if(typeof window.cookieconsent != "undefined") {
+			window.cookieconsent.initialise({
+				"palette": {
+					"popup": {
+					"background": "#000"
+					},
+					"button": {
+					"background": "#f1d600"
+					}
+				},
+				"theme": "classic",
+				"position": "bottom-right",
+				"content": {
+					"message": "This website uses cookies to ensure you get the best experience on our website. ",
+					"dismiss": "Got it !",
+				}
+			})
+		}
+	});
+	</script><script type="text/javascript" src="https://cdn.alldebrid.com/lib/script/tippy.js?cacheKiller=1212"></script><script>var lang = {"js_vpn2_content_bad_ip":"This IP is not valid","js_vpn2_content_ip_already_waiting":"This IP is already waiting manual review","js_vpn2_content_bad_provider":"This VPN provider is not valid","js_vpn2_content_bad_screenshot":"The screenshot is not valid","js_vpn2_content_bad_captcha":"The captcha link is not valid","js_vpn2_content_bad_req":"The request has failed, please retry","js_vpn2_content_already_refused":"This IP has already been verified and denied, its use is not compatible with our service","js_vpn2_content_bad_screenshot_type":"The screenshot is not a valid image","js_vpn2_content_bad_screenshot_size":"The screenshot is too heavy","js_vpn2_content_bad_screenshot_failed":"An error occured during screenshot upload","js_vpn2_content_bad_screenshot_int_error":"An internal error occured during screenshot upload","torrent_error_happened":"Error","torrent_error_invalid_magnet":"Invalid magnet","torrent_error_not_a_magnet":"This doesn't seem to be a magnet link","torrent_error_must_be_loggued":"You have to be loggued to use this service","torrent_error_must_be_premium":"You have to be premium to use this service","torrent_error_already_added":"Torrent already running","torrent_error_torrent_too_large":"Torrent is too large, can't be bigger than","torrent_error_invalid_torrent":"Torrent is broken \/ invalid","torrent_error_not_a_torrent":"File is not a torrent","torrent_error_upload_failed":"Upload failed","torrent_error_no_server":"Servers are not allowed to use this feature","torrent_error_max_magnets_reached":"You have reached the magnets limit reached (1000 accross all tabs)","torrent_error_max_queue_reached":"Reached max simultanous torrent","torrent_error_internal_error":"Internal error on move","torrent_error_cant_bootstrap":"Could not start the magnet","torrent_error_too_long":"Download took more than 72h","torrent_error_processing_failed":"Proccessing failed (bad torrent ?)","js_speedtest_title":"Testing your speed","js_speedtest_running":"Test is running, please wait...","js_speedtest_done":"Speedtest done","js_speedtest_done_title":"Speedtest completed","js_speedtest_testing_server":"Testing speed on","js_speedtest_ping_server":"Testing ping on","js_freedays_error_invalid_phone":"This phone number is not valid, please check again","js_freedays_error_saving":"Error saving phone, retry or refresh the page","js_freedays_error_invalid_country":"The country code is not valid, choose from the list","js_freedays_error_already_used":"This phone number has already been used by another user","js_freedays_sending":"Sending message","js_freedays_sending_sms":"Sending SMS","js_freedays_waiting_chat":"Waiting for chat","js_freedays_error_method":"Error selecting method, retry ?","js_freedays_error_overused_method":"Please choose another provider, already sent too much messages with this one","js_freedays_error_cant_send":"Could not send message","js_freedays_with_whatsapp":"with Whatsapp","js_freedays_with_signal":"with Signal","js_freedays_with_telegram":"with Telegram chat","js_freedays_with_sms":"with SMS","js_freedays_code_sent":"Code was sent","js_freedays_loading":"Loading...","js_freedays_sendsms_tophone":"We will send a code to your phone","js_freedays_choosemethod":"please choose a method","js_freedays_from_whatsapp":"Get your activation code on your WhatsApp app","js_freedays_from_signal":"Get your activation code on your Signal app","js_freedays_from_telegram":"Talk to our bot Telegram to get your activation code","js_freedays_from_sms":"Get your activation code in a SMS on your phone","js_freedays_worldwide":"Works worldwide","js_freedays_instant_delivery":"Instant delivery","js_freedays_crypted":"Encrypted communication","js_freedays_inter_bot":"Interactive bot","js_freedays_mostcountries":"Most countries supported","js_freedays_fast_delivery":"Fast delivery","js_freedays_need_sms":"Need to receive a SMS","js_freedays_confirm_whatsapp":"We will send your activation code on your WhatsApp number","js_freedays_confirm_signal":"We will send your activation code on your Signal number","js_freedays_confirm_telegram":"Talk to our Telegram bot, verify your phone number and get your code","js_freedays_confirm_sms":"We will send your activation code on your number","js_freedays_confirm_whatsapp_button":"Receive my code on WhatsApp","js_freedays_confirm_signal_button":"Receive my code on Signal","js_freedays_confirm_telegram_button":"Talk to our Telegram bot","js_freedays_confirm_sms_button":"Receive my code by SMS","js_freedays_active_free":"Activating your freedays","js_freedays_active_free_onphone":"on your phone","js_freedays_active_free_status":"Status","js_freedays_choose_other_method":"Choose another method","js_freedays_retry_code":"Retry sending the code","js_freedays_start_chat_telegram":"Start a chat with our Telegram bot to get your activation code","js_freedays_open_link_bot":"Open this link","js_freedays_open_link_bot_desc":"on your Telegram device to open the chat","js_wait":"Generating link ... Wait","js_login":"You must login or create an account to use the service.","js_waiting_time":"Waiting time estimated at","js_no_generated":"Could not generate link","js_extractor_wait":"Extracting links from redirector...","js_extractor_error":"Error during links extraction, are you loggued ?","js_premium":"You need to be premium to generate your links, you can check <a style='color: #3947b7; padding-left: 4px;' href='\/offer\/'>our offer here<\/a>","js_more_infos":"More info","js_local_stream":"Local stream","js_waiting_download_soon":"Your download should be ready soon...","js_stream_source":"Source video","js_filename":"Filename","js_eta":"ETA","js_status":"Status","js_downloaded":"Downloaded","js_dl":"DL","js_size":"Size","js_speed":"Speed","js_seeders":"Peers","js_get_info":"Getting torrent information","js_loading":"Loading","js_add_magnet":"Add a magnet","js_upload_torrent":"Upload a torrent","js_in_progress":"In progress","js_finished":"Finished","js_expired":"Expired","js_in_error":"Failed","js_just_uploaded":"Here are the files you've just uploaded","js_uploading":"Uploading","js_one_file_failed":"One of the file has errors","js_remove_al":"Remove all","js_delete_sure":"Are you sure?","js_download_all":"Download all","js_restart_all":"Restart all","js_unselect_all":"Unselect all","js_selected_file":"Selected files","js_drop_here":"Drop here","js_processing":"Processing","js_ready_dl":"Ready to download","js_upload":"Upload","js_yes":"Yes","js_no":"No","js_just_uploading":"Upload in progress...","js_restart":"Restart the torrent","js_status_queue":"In queue","js_status_downloading":"Downloading","js_status_processing":"Processing","js_status_uploading":"Uploading","js_show_links":"Show links","js_compact_mode":"Compact mode","js_copy_all":"Copy all links","js_copied":"Copied !","js_copied_one":"Copied !","js_completed_on":"Completed on","js_not_available":"Unavailable","js_ext_dl":"External download","js_copy_links":"Copy links","js_download":"Download","js_delete":"Delete","js_apikeys_apikey":"Apikey","js_apikeys_name":"Name","js_apikeys_last_ip":"Last IP","js_apikeys_last_client":"Last client","js_apikeys_last_seen":"Last activity","js_apikeys_geosecurity":"Geo security","js_apikeys_actions":"Actions","torrent_error_link_down":"Link is unavailable"};
+			function start() {
+
+			if(typeof pageInit !== 'undefined') {
+				pageInit();
+				syncDate();
+			}
+
+            tippy('.tippy');
+
+document.addEventListener('alldMessagingLoaded', function() {
+	alldSendMessage({command: 'syncLogguedState', isLoggued: false});
+});	}
+		window.onload = start;
+		
+	  </script>
+</body></html>
