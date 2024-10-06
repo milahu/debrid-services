@@ -117,6 +117,20 @@ for match1 in re.finditer(regex1, debrid_html):
 
 
 
+debrid_url = "https://www.premiumize.me/services?q=all"
+debrid_id = get_netloc(debrid_url)
+debrid_html = get_debrid_html(debrid_url, debrid_id)
+debrid_hoster_map[debrid_id] = dict()
+# src="https://www.google.com/s2/favicons?domain=uploadgig.com"
+regex = r'src="https://www\.google\.com/s2/favicons\?domain=([^"]+)"'
+for match in re.finditer(regex, debrid_html):
+    hoster_id = match.group(1)
+    if hoster_id in debrid_hoster_map[debrid_id]:
+        raise KeyError(f"key already exists: {hoster_id!r}")
+    debrid_hoster_map[debrid_id][hoster_id] = True
+
+
+
 print("writing", result_path)
 with open(result_path, "w") as f:
     json.dump(debrid_hoster_map, f, indent=2)
