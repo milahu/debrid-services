@@ -131,6 +131,15 @@ for match in re.finditer(regex, debrid_html):
 
 
 
+# sort by debrid_id
+debrid_hoster_map = dict(sorted(debrid_hoster_map.items()))
+
+# sort by hoster_id
+for debrid_id in debrid_hoster_map:
+    debrid_hoster_map[debrid_id] = dict(sorted(debrid_hoster_map[debrid_id].items()))
+
+
+
 print("writing", result_path)
 with open(result_path, "w") as f:
     json.dump(debrid_hoster_map, f, indent=2)
