@@ -131,6 +131,25 @@ for match in re.finditer(regex, debrid_html):
 
 
 
+# note: we must be logged in to see this page
+# otherwise we get "403 - forbidden"
+# (idiots just love to hide...)
+debrid_url = "https://neodebrid.com/hosts-status"
+debrid_id = get_netloc(debrid_url)
+debrid_html = get_debrid_html(debrid_url, debrid_id)
+debrid_hoster_map[debrid_id] = dict()
+regex = (
+    r'<a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">([^<]+)</a>'
+)
+for match in re.finditer(regex, debrid_html):
+    hoster_id = match.group(1).lower()
+    if hoster_id in debrid_hoster_map[debrid_id]:
+        continue
+    debrid_hoster_map[debrid_id][hoster_id] = True
+
+
+
+
 # sort by debrid_id
 debrid_hoster_map = dict(sorted(debrid_hoster_map.items()))
 
