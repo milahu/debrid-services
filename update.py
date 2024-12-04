@@ -125,6 +125,7 @@ debrid_hoster_map[debrid_id] = dict()
 regex = r'src="https://www\.google\.com/s2/favicons\?domain=([^"]+)"'
 for match in re.finditer(regex, debrid_html):
     hoster_id = match.group(1)
+    hoster_id = hoster_id.split("%2F")[0]
     if hoster_id in debrid_hoster_map[debrid_id]:
         raise KeyError(f"key already exists: {hoster_id!r}")
     debrid_hoster_map[debrid_id][hoster_id] = True
