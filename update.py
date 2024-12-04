@@ -71,21 +71,26 @@ for match in re.finditer(regex, debrid_html):
 
 
 
+# TODO also parse daily limits
 debrid_url = "https://www.deepbrid.com/status"
 debrid_id = get_netloc(debrid_url)
 debrid_html = get_debrid_html(debrid_url, debrid_id)
 debrid_hoster_map[debrid_id] = dict()
 #regex = r'<tr><td class="border-b"><div class="hosters ([^ "]+)">' # free hosters
-regex = r'\n<td class="border-b"><div class="hosters ([^ "]+)"></div>' # premium hosters
+regex = r'<td class="border-b"><div class="hosters ([^ "]+)"></div>' # premium hosters
 for match in re.finditer(regex, debrid_html):
     hoster_id = match.group(1)
     if hoster_id in debrid_hoster_map[debrid_id]:
+        continue
         raise KeyError(f"key already exists: {hoster_id!r}")
     debrid_hoster_map[debrid_id][hoster_id] = True
 
 
 
 
+# this page was removed
+# alldebrid.com is based in france like real-debrid.com
+# so maybe this is pro-active self-censorship...
 debrid_url = "https://alldebrid.com/hosts/"
 debrid_id = get_netloc(debrid_url)
 debrid_html = get_debrid_html(debrid_url, debrid_id)
@@ -132,6 +137,7 @@ for match in re.finditer(regex, debrid_html):
 
 
 
+# TODO also parse daily limits
 # note: we must be logged in to see this page
 # otherwise we get "403 - forbidden"
 # (idiots just love to hide...)
