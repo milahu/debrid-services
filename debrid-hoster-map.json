@@ -58,9 +58,13 @@
     "dailymotion": true,
     "ddownload": true,
     "depositfiles": true,
+    "dfiles": true,
+    "drop": true,
+    "dropapk": true,
     "easybytez": true,
     "emload": true,
     "extmatrix": true,
+    "fastfile": true,
     "fikper": true,
     "file": true,
     "file4safe": true,
@@ -76,6 +80,7 @@
     "fireget": true,
     "free": true,
     "gigapeta": true,
+    "hexload": true,
     "hitfile": true,
     "hot4share": true,
     "hotlink": true,
@@ -85,6 +90,8 @@
     "jumploads": true,
     "k2s": true,
     "katfile": true,
+    "kenfiles": true,
+    "krakenfiles": true,
     "mediafire": true,
     "mega": true,
     "mexashare": true,
@@ -103,12 +110,15 @@
     "slideshare": true,
     "solidfiles": true,
     "soundcloud": true,
+    "subyshare": true,
+    "syncs": true,
     "takefile": true,
     "terabytez": true,
     "turbobit": true,
     "tusfiles": true,
     "uploadboy": true,
     "uploadgig": true,
+    "uploadhaven": true,
     "uptobox": true,
     "userscloud": true,
     "vidoza": true,
@@ -445,6 +455,9 @@
       "drop.download",
       "dropapk.to"
     ],
+    "fikper": [
+      "fikper.com"
+    ],
     "fileal": [
       "file.al"
     ],
@@ -529,16 +542,6 @@
     "sendspace": [
       "sendspace.com"
     ],
-    "soundcloud": [
-      "soundcloud.com"
-    ],
-    "streamtape": [
-      "streamtape.com",
-      "strcloud.link",
-      "strcloud.sx",
-      "adblockeronstreamtape.com",
-      "streamtape.to"
-    ],
     "terabytez": [
       "terabytez.org"
     ],
@@ -554,25 +557,14 @@
       "turbobif.com",
       "tbit.to"
     ],
-    "upstream": [
-      "upstream.to"
-    ],
-    "userscloud": [
-      "userscloud.com"
+    "uploady": [
+      "uploady.io"
     ],
     "usersdrive": [
       "usersdrive.com"
     ],
-    "vidoza": [
-      "vidoza.net",
-      "vidoza.co",
-      "vidoza.org"
-    ],
     "vimeo": [
       "vimeo.com"
-    ],
-    "vk": [
-      "vk.com"
     ],
     "voe": [
       "voe.sx",
@@ -610,9 +602,6 @@
     ],
     "youporn": [
       "youporn.com"
-    ],
-    "youtube": [
-      "youtube.com"
     ]
   },
   "torbox.app": {
@@ -629,6 +618,8 @@
     "mega.co.nz": true,
     "mega.io": true,
     "mega.nz": true,
+    "megaup.net": true,
+    "pan.baidu.com": true,
     "pixeldrain.com": true,
     "rapidgator.net": true,
     "turbobit.net": true,
