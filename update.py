@@ -156,6 +156,22 @@ for match in re.finditer(regex, debrid_html):
 
 
 
+# /templates/images/filehosts/small/rapidgator.net.png?v=3"
+# /templates/images/filehosts/small/ddl.to.png?v=3
+debrid_url = "https://linksnappy.com/myaccount/status"
+debrid_id = get_netloc(debrid_url)
+debrid_html = get_debrid_html(debrid_url, debrid_id)
+debrid_hoster_map[debrid_id] = dict()
+regex = (
+    r'/templates/images/filehosts/small/([a-z.-]+).png\?v=3'
+)
+for match in re.finditer(regex, debrid_html):
+    hoster_id = match.group(1).lower()
+    if hoster_id in debrid_hoster_map[debrid_id]:
+        continue
+    debrid_hoster_map[debrid_id][hoster_id] = True
+
+
 
 # sort by debrid_id
 debrid_hoster_map = dict(sorted(debrid_hoster_map.items()))
