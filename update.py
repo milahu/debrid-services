@@ -169,6 +169,7 @@ for match in re.finditer(regex, debrid_html):
     hoster_id = match.group(1).lower()
     if hoster_id in debrid_hoster_map[debrid_id]:
         continue
+    if hoster_id == "rg": continue # duplicate with rapidgator.net
     debrid_hoster_map[debrid_id][hoster_id] = True
 
 
