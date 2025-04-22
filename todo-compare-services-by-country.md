@@ -14,7 +14,9 @@ the servers can be located in a different country, or in multiple countries
 - debrid-link.com - [france](https://debrid-link.com/legal) 🔴
 - neodebrid.com - [england](https://neodebrid.com/legal)
   - customer support is nonexistant, they ignore all requests 🔴
-  - the [forgot password](https://neodebrid.com/password/reset) form is broken, it always returns http 500 🔴
+    - ignores my "forgot password" request per email to contact@neodebrid.com
+    - maybe [chat](https://neodebrid.com/contact) works better than email
+  - the [forgot password](https://neodebrid.com/password/reset) form is broken, it always returns http 500 "500 Server Error" 🔴
   - pyload plugin: no ([pyload issues](https://github.com/pyload/pyload/issues?q=neodebrid))
   - [pricing](https://neodebrid.com/pricing):
     - 10eur / 30 days = 10eur / month
@@ -93,9 +95,15 @@ the servers can be located in a different country, or in multiple countries
       - 140usd / 3years = 3.88eur / month
 - torbox.app - [south africa](https://torbox.app/terms)
   - servers: netherlands? (source?)
-  - [integrations](https://support.torbox.app/en/articles/9837721-supported-debrid-hosters)
+  - [integrations](https://torbox.app/integrations)
+    - [hosters](https://torbox.app/hosters)
+    - [Web Downloads - Debrid Hosters](https://support.torbox.app/en/articles/9837721-debrid-hosters)
+      - rapidgator.net is not supported 🔴
   - pyload plugin: no ([pyload issues](https://github.com/pyload/pyload/issues?q=torbox))
-  - [pricing](https://torbox.app/pricing) per month: 2.10usd - 3.50usd - 7usd ([limitations](https://support.torbox.app/en/articles/9836418-account-restrictions))
+  - [pricing](https://torbox.app/pricing) with "access to web downloads" ([limitations](https://support.torbox.app/en/articles/9836418-account-restrictions))
+    - Essential Plan: 2.10usd / month
+    - Standard Plan: 3.50usd / month
+    - Pro Plan: 7usd / month
   - buy premium account error: "This Shop has temporarily disabled Product purchases"
     - ["We have disabled sign ups until our service has been stabilized. We thank you for your patience."](https://old.reddit.com/r/StremioAddons/comments/1gz9ocs/comparison_of_debrid_services_11242524/lz1d7ux/)
 - offcloud.com - ?
@@ -113,36 +121,41 @@ the servers can be located in a different country, or in multiple countries
 - [linksnappy.com](https://linksnappy.com/)
   - [integrations](https://linksnappy.com/myaccount/status)
   - [pricing](https://linksnappy.com/faqs)
-    - 5usd / 7days
-    - 13usd / 30days
-    - 30usd / 90days
-    - 55usd / 180days
+    - 5usd / 7days = 21.43usd / month
+    - 13usd / 30days = 13usd / month
+    - 30usd / 90days = 10usd / month
+    - 55usd / 180days = 9.17usd / month
 - [proleech.link](https://proleech.link/) - ?
   - first impression: shady
     - they hide their pricing behind login
     - they have no offline contact address (imprint, office location)
   - [pricing](https://proleech.link/signup) (requires login)
-    - 8usd / 30days
-    - 21usd / 90days
-    - 61usd / 365days
+    - 8usd / 30days = 8usd / month
+    - 21usd / 90days = 7usd / month
+    - 61usd / 365days = 5usd / month
 
 filehosters (as a comparison with debrid services)
 
 - rapidgator.net
   - most popular, most stable (long file retention)
   - [pricing](https://rapidgator.net/article/premium) - sorted by price per month
-    - 33 GB / day
-      - 100usd / year = 8.33usd / month = 12 TB Bandwidth (33 GB / day) = 12 TB Storage
-      - 15usd / 30days = 15usd / month = 1 TB Bandwidth (33 GB / day) = 1 TB Storage
-    - 44 GB / day
-      - 40usd / 90days = 13.33usd / month = 4 TB Bandwidth (44 GB / day) = 3 TB Storage
-    - 66 GB / day
-      - 50usd / 90days = 16.66usd / month = 6 TB Bandwidth (66 GB / day) = 3 TB Storage
-      - 200usd / year = 16.66usd / month = 24 TB Bandwidth (66 GB / day) = 12 TB Storage
-      - 30usd / 30days = 30usd / month = 2 TB Bandwidth (66 GB / day) = 1 TB Storage
-    - 133 GB / day
-      - 100usd / 90days = 33.33usd / month = 12 TB Bandwidth (133 GB / day) = 3 TB Storage
-      - 40usd / 30days = 40usd / month = 4 TB Bandwidth (133 GB / day) = 1 TB Storage
+    - 15usd / TB
+      - 15usd / 30days = 15usd / month = 1 TB Bandwidth (33 GB / day) (15usd / TB) = 1 TB Storage
+      - 30usd / 30days = 30usd / month = 2 TB Bandwidth (66 GB / day) (15usd / TB) = 1 TB Storage
+    - 10usd / TB
+      - 40usd / 90days = 13.33usd / month = 4 TB Bandwidth (44 GB / day) (10usd / TB) = 3 TB Storage
+      - 40usd / 30days = 40usd / month = 4 TB Bandwidth (133 GB / day) (10usd / TB) = 1 TB Storage
+    - 8usd / TB
+      - 50usd / 90days = 16.66usd / month = 6 TB Bandwidth (66 GB / day) (8usd / TB) = 3 TB Storage
+      - 100usd / 90days = 33.33usd / month = 12 TB Bandwidth (133 GB / day) (8usd / TB) = 3 TB Storage
+      - 100usd / year = 8.33usd / month = 12 TB Bandwidth (33 GB / day) (8usd / TB) = 12 TB Storage
+      - 200usd / year = 16.66usd / month = 24 TB Bandwidth (66 GB / day) (8usd / TB) = 12 TB Storage
+- ddownload.com
+  - [pricing](https://ddownload.com/premium.html)
+    - 15eur / month = 2.50eur / TB
+    - 50eur / 6months = 8.33eur / month = 1.40eur / TB
+    - 70eur / 6months = 5.75eur / month = 0.96eur / TB
+  - bandwidth: 200GB / day = 6TB / month = 2.31MB/s
 
 [european countries not in the european union = EU](https://europe-visa.com/european-countries-not-in-the-eu/): switzerland, england, iceland, norway, liechtenstein, albania, armenia, georgia, kosovo, montenegro, serbia, ukraine, ...
 
