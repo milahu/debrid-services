@@ -174,3 +174,120 @@ see also: bittorrent legal status by country
 todo: automate detection of server locations with [geoip2](https://pypi.org/project/geoip2/)
 
 todo: install geoip database in shell.nix
+
+## seedbox hosting locations
+
+https://www.reddit.com/r/seedboxes/comments/jopvg6/why_are_most_seedboxes_located_in_the_netherlands/
+
+https://www.reddit.com/r/seedboxes/comments/3xi0jc/why_are_most_seedboxes_hosted_in_the_netherlands/
+
+https://www.reddit.com/r/seedboxes/comments/954hnz/why_france_and_netherlands_seem_to_be_by_far_the/
+
+https://www.seedboxcompare.com/en/seedbox-comparison
+
+### rapidgator.net
+
+```
+$ geoiplookup $(dig +short rapidgator.net | head -n1)
+GeoIP Country Edition: LT, Lithuania
+GeoIP City Edition, Rev 1: LT, 00, N/A, N/A, N/A, 55.416698, 24.000000, 0, 0
+GeoIP ASNum Edition: AS50098 Melbikomas UAB
+```
+
+### 1fichier.com
+
+```
+$ geoiplookup $(dig +short 1fichier.com | head -n1)
+GeoIP Country Edition: FR, France
+GeoIP City Edition, Rev 1: FR, 00, N/A, N/A, N/A, 48.858200, 2.338700, 0, 0
+GeoIP ASNum Edition: AS198792 DSTORAGE s.a.s.
+```
+
+### feralhosting.com
+
+unlimited bandwidth
+
+https://www.feralhosting.com/pricing
+
+1 TB HDD: 10 GBP/month = 12 EUR/month
+
+https://www.feralhosting.com/about#company
+
+<blockquote>
+
+Feral Hosting is incorporated under the name "Feral.io Ltd" in England and Wales
+with company number 11569545 and VAT registration 306 2318 38.
+We can be contacted on legal@feralhosting.com. We have a privacy policy. The registered office is:
+
+C/O KKVMS LLP  
+Capital Tower  
+91 Waterloo Road  
+London  
+SE1 8RT
+
+</blockquote>
+
+https://network.feral.io/reroute
+
+> Feral is an ISP
+
+> ASN 200052
+
+https://www.peeringdb.com/asn/200052
+
+> Netherlands Amsterdam
+
+### rapidseedbox.com
+
+unlimited bandwidth
+
+1.2 TB HDD: 18 EUR/month
+
+https://www.rapidseedbox.com/faq
+
+<blockquote>
+
+Where are your Servers located?
+
+France and the Netherlands.
+
+</blockquote>
+
+email support says:
+
+> Servers located in NL, we use HDD for it
+
+> The company is registered in the Seychelles
+
+### annas-archive.org
+
+```
+$ geoiplookup $(dig +short annas-archive.org | head -n1)
+GeoIP Country Edition: NL, Netherlands
+GeoIP City Edition, Rev 1: NL, 00, N/A, N/A, N/A, 52.382401, 4.899500, 0, 0
+GeoIP ASNum Edition: AS59692 IQWeb FZ-LLC
+
+$ geoiplookup $(dig +short wbsg8v.xyz | head -n1)
+GeoIP Country Edition: UA, Ukraine
+GeoIP City Edition, Rev 1: UA, 30, N/A, Kyiv, 03027, 50.458000, 30.530300, 0, 0
+GeoIP ASNum Edition: AS30860 Virtual Systems LLC
+
+$ geoiplookup 45.151.91.208
+GeoIP Country Edition: DE, Germany
+GeoIP City Edition, Rev 1: DE, HE, N/A, Frankfurt am Main, 60313, 50.116901, 8.683600, 0, 0
+GeoIP ASNum Edition: AS214309 Aurorix Gaming Solutions Limited
+
+$ geoiplookup $(dig +short momot.rs | head -n1)
+GeoIP Country Edition: UA, Ukraine
+GeoIP City Edition, Rev 1: UA, 00, N/A, N/A, N/A, 50.452202, 30.528700, 0, 0
+GeoIP ASNum Edition: AS6698 Virtual Systems LLC
+```
+
+### sci-hub.ru
+
+```
+$ geoiplookup $(dig +short sci-hub.ru | head -n1)
+GeoIP Country Edition: AE, United Arab Emirates
+GeoIP City Edition, Rev 1: AE, 00, N/A, N/A, N/A, 23.750000, 54.500000, 0, 0
+GeoIP ASNum Edition: AS59692 IQWeb FZ-LLC
+```
